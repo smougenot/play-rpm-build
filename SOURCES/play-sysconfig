@@ -1,0 +1,17 @@
+# Configuration pour playframework
+#
+
+# Path de play
+PLAY_HOME=/opt/play
+
+# Vérif
+if [ ! -d $PLAY_HOME ]; then
+  echo "Le repertoire contenant play ("$PLAY_HOME") est introuvable."
+  exit 2
+fi
+
+PLAY=$PLAY_HOME/play
+if [ ! -x $PLAY ]; then
+  echo "Le lanceur de play ("$PLAY") est introuvable."
+  exit 2
+fi
