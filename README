@@ -1,0 +1,8 @@
+# 
+# A Little RPM package proposition for playframework users
+#
+
+Installation is in /opt/play
+Uses /etc/sysconfig/play for some env variables
+
+Sample service script is SOURCES/play_initd
