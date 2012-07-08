@@ -54,7 +54,7 @@ sed -i 's|@@SKEL_APP@@|%{name}|g' $RPM_BUILD_ROOT%{_sysconffile}
 sed -i 's|@@SKEL_APPDIR@@|%{myappdir}|g' $RPM_BUILD_ROOT%{_sysconffile}
 
 # cas particulier pour certaines VM
-sed -i "s|\(java_args.append('-Dfile.encoding=utf-8')\)|\1 \n java_args.append('-XX:CompileCommand=exclude,jregex/Pretokenizer,next')|g" $RPM_BUILD_ROOT/%{myappdir}/framework/pym/play/application.py
+sed -i "s|\(java_args.append('-Dfile.encoding=utf-8')\)|\1\n        java_args.append('-XX:CompileCommand=exclude,jregex/Pretokenizer,next')|g" $RPM_BUILD_ROOT/%{myappdir}/framework/pym/play/application.py
 
 %clean
 rm -rf $RPM_BUILD_ROOT
